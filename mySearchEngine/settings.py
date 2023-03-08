@@ -25,12 +25,18 @@ SECRET_KEY = 'f%t0&fy4df2@#z@@&2g&rcu=@g27=h90=zr#hwyxz5w*3s)w9i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ORIGINE
 ALLOWED_HOSTS = []
+# CHANGE LOG
+# ALLOWED_HOSTS = ['http://localhost:8080']
+# CORS_ALLOWED_ORIGINS = ['http://localhost:8080']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    # 'corsheaders',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +48,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # 'corsheaders.middleware.CorsMiddleawre',
+    # 'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,6 +59,22 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# CORS_ALLOW_HEADERS = [
+#     'Authorization',
+#     'Origin',
+#     'Content-Type',
+#     'Accept',
+# ]
+
+# CORS_ALLOW_METHODS = [
+#     'DELETE',
+#     'GET',
+#     'POST',
+#     'PUT',
+#     'PATCH',
+#     'OPTIONS',
+# ]
 
 ROOT_URLCONF = 'mySearchEngine.urls'
 
