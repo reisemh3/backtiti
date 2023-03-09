@@ -10,6 +10,12 @@ class ProduitEnPromotion(models.Model):
     class Meta:
         ordering = ('tigID',)
 
+class ProduitDisponible(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+    tigID = models.IntegerField(default='-1')
+
+    class Meta:
+        ordering = ('tigID',)
 
 class PoissonListe(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -18,14 +24,12 @@ class PoissonListe(models.Model):
     class Meta:
         ordering = ('tigID',)
 
-
 class CoquillageListe(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     tigID = models.IntegerField(default='-1')
 
     class Meta:
         ordering = ('tigID',)
-
 
 class CrustaceListe(models.Model):
     created = models.DateTimeField(auto_now_add=True)

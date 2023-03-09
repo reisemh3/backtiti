@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+#    path('', admin.site.urls, name = 'projectRoot'),
     path('admin/', admin.site.urls),
     path('', include('mytig.urls')),
+###################
+#...TME2 starts...#
+    path('', include('myImageBank.urls')),
+#...end of TME2...#
+###################
 ]
